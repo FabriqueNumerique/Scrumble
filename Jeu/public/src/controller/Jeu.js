@@ -12,7 +12,8 @@ export default class Jeu extends Controller {
 
     this.jeu();
     this.createModal();
-    // this.createDice();
+// this.createDice();
+    //  this.traitementUserstorie();   
     // this.getRandomNumber()
     //  this.traitementformulaire();
     // this.createCarte();
@@ -692,6 +693,8 @@ export default class Jeu extends Controller {
                 nameJoueur.classList.add("repartition");
                 nameJoueur.style.width = "100%";
 
+
+                // this.traitementUserstorie();
                 // traitement de la partie usersstories en cours creation methode TraitementUserstories
                 let dettetechnique = document.getElementById("dettetech");
                 console.log(dettetechnique);
@@ -721,6 +724,7 @@ export default class Jeu extends Controller {
 
                 // const listUserstories = document.getElementById("listUserstories");
 
+                // loadCharacters function => method
 
                 let hpCharacters = [];
 
@@ -938,6 +942,131 @@ export default class Jeu extends Controller {
 modal()
 
   }
+  // traitementUserstorie(){
+  //   let config = this.state.paquet[0]; //recuperation des userstories
+  //   let dettetechnique = document.getElementById("dettetech");
+  //   console.log(dettetechnique);
+  //   dettetechnique.innerHTML = config.dettetechnique;
+  //   // traitement arrive des userstories:
+
+  //   let listUserstories = document.getElementById('listUserstories');
+
+  //   console.log(listUserstories, config);
+  //   // listUserstories.innerHTML = "";
+
+
+  //   let carteid1 = config.carte1;
+  //   let valuecarteid1 = parseInt(carteid1);
+  //   console.log(valuecarteid1);
+  //   let carteid2 = config.carte2;
+  //   let valuecarteid2 = parseInt(carteid2);
+  //   console.log(valuecarteid2);
+  //   let carteid3 = config.carte3;
+  //   let valuecarteid3 = parseInt(carteid3);
+  //   console.log(valuecarteid3);
+  //   let carteid4 = config.carte4;
+  //   let valuecarteid4 = parseInt(carteid4);
+  //   console.log(valuecarteid4);
+  //   let configuration = config.url;
+  //   console.log(configuration, carteid1, carteid2, carteid3, carteid4);
+
+  //   // const listUserstories = document.getElementById("listUserstories");
+
+  //   // loadCharacters function => method
+
+  //   let hpCharacters = [];
+
+
+  //   const loadCharacters = async () => {
+  //     try {
+  //       const res = await fetch(config.url);
+  //       hpCharacters = await res.json();
+  //       console.log(res + "  " + hpCharacters);
+  //       displayCharacters(hpCharacters);
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
+  //   const displayCharacters = (characters) => {
+  //     const htmlString = characters
+  //       .map((character) => {
+  //         console.log(character);
+  //         if ((config.carte1statut === 'encours' && character.id === valuecarteid1) || (config.carte2statut === 'encours' && character.id === valuecarteid2) || (config.carte3statut === 'encours' && character.id === valuecarteid3) || (config.carte4statut === 'encours' && character.id === valuecarteid4)) {
+  //           console.log(config.carte1statut, config.carte2statut, config.carte3statut, config.carte4statut);
+
+  //           return `
+  //               <div class="insideboxcadre">
+  //                   <p class="insideboxtext">Userstorie N°${character.id} </p>
+  //                   <p style="margin-left: 2% ;margin-right: 2%;">|</p>
+  //                   <p class="insideboxtext"> ${character.taille} </span></p>
+  //                   <p style="margin-left: 2% ;margin-right: 2%;">|</p>
+  //                   <p class="cadrebox"> </p> 
+  //               </div>`;
+
+
+  //         }
+
+  //       })
+  //       .join('');
+  //     listUserstories.innerHTML = htmlString;
+  //     // /////////////////////dette technique://////////////
+  //     dettetechnique.innerHTML = config.dettetechnique;
+  //     /////// creation du drage and drop sur accordeon
+  //     const zonejoueur = document.querySelectorAll('.cadrebox');
+  //     const itemGame = document.querySelectorAll('.itemGame');
+  //     console.log(zonejoueur, itemGame);
+  //     let draggedItem = null;
+  //     itemGame.forEach((element) => {
+  //       // const item = element[i];
+  //       // console.log(element[i])
+
+  //       element.addEventListener("dragstart", function (e) {
+  //         const element = e.target;
+
+  //         function display(e) {
+  //           const zone = e.target;
+  //           zone.append(element);
+  //           console.log("elment", element);
+
+  //           zonejoueur.forEach((zone) => {
+  //             zone.removeEventListener("drop", display);
+  //           });
+  //         }
+
+  //         //sur chaque carte on effectue un evement d'activation du déplacement
+  //         console.log("dragstart", e);
+  //         // draggedItem = element; // 1 elt deplacé = un item
+  //         setTimeout(function () {
+  //           element.style.display = "none"; // chaque item n'a pas de style display particulier
+  //         }, 0);
+
+  //         zonejoueur.forEach((zone) => {
+  //           zone.addEventListener("dragover", function (e) {
+  //             e.preventDefault();
+  //           });
+  //           zone.addEventListener("dragenter", function (e) {
+  //             e.preventDefault();
+  //           });
+  //           zone.addEventListener("drop", display);
+  //         });
+  //       });
+
+  //       element.addEventListener("dragend", function () {
+  //         // sur chaque carte on effectue un evement de fin du déplacement
+  //         console.log("dragend");
+  //         setTimeout(function (e) {
+  //           element.style.display = "block"; // chaque item déplacé a style display particulier block
+  //           //  draggedItem = null;
+  //         }, 0);
+  //       });
+  //     });
+  //     ///////////////////////////////fin dragenddrop////////
+  //   };
+
+
+  //   loadCharacters();
+
+  // }
 // createCard(){
 //   socket.on('join room', (roomId) => {
 //     player.roomId = roomId;

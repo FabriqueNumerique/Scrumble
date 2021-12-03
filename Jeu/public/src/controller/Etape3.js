@@ -11,6 +11,7 @@ export default class Etape3 extends Controller {
 console.log(listurl);
      this.afficher();
      this.tirage();
+     this.premiertirage();
 
   }
 
@@ -29,6 +30,7 @@ console.log(listurl);
     //console.log(cadrillage);
 
     if (titre != "...") {
+      //transformation en this.cas 1 pb cela ne fonctionne pas
       let carte = document.createElement("div");
       carte.classList.add('forme');
       carte.style.border = " 5px solid  #475158";
@@ -129,17 +131,18 @@ console.log(listurl);
 
       function selection() {
         this.dataset.choisi = true;
-       prioriser();
-
+        prioriser();
+      //  this.prioriser();
+      //  prioriser devient une méthode mais cela ne fonctionne pas
+        
       }
-
-      function prioriser() {
+     function prioriser() {
         let priorite = document.querySelectorAll("div[data-choisi='true']");
         let text = document.querySelector("#nombrecarteSelected");
         let tableauassociatif = new Array();
         let listeltselectionne = Array.from(priorite);
-
-
+    
+    
         if(listeltselectionne[0]!=""){
           let ident=listeltselectionne[0].id; //correspond a l'id de la userstorie donc a un id sur 25 pas au titre 
          
@@ -210,7 +213,7 @@ console.log(listurl);
         if (priorite.length >= 4) {
           document.querySelector("#nombrecarteSelected").style.fontSize = "3em";
           document.querySelector("#nombrecarteSelected").textContent = "VOUS AVEZ SELECTIONNE 4 CARTES!!! c'EST SUFFISANT";
-
+    
         }
       
         
@@ -247,16 +250,138 @@ console.log(listurl);
           if (listeltselectionne[i] != "") {
             listeltselectionne[i].innerHTML = "A";
             listeltselectionne[i].classList.add("marque");
-
-
+    
+    
           }
          
         }
-
+    
       }
+
+    
     }
   }
+  // prioriser() {
+  //   let priorite = document.querySelectorAll("div[data-choisi='true']");
+  //   let text = document.querySelector("#nombrecarteSelected");
+  //   let tableauassociatif = new Array();
+  //   let listeltselectionne = Array.from(priorite);
+
+
+  //   if(listeltselectionne[0]!=""){
+  //     let ident=listeltselectionne[0].id; //correspond a l'id de la userstorie donc a un id sur 25 pas au titre 
+     
+  //     listeltselectionne[0].innerHTML = "A";
+  //     listeltselectionne[0].classList.add("marque");
+     
+  //   Object.defineProperty(obj1, "carteid1", {
+  //     enumerable: false,
+  //     configurable: true,
+  //     writable: false,
+  //     value: ident
+  //   });
+  //   }
+  //   if(listeltselectionne[1]!=""){
+  //     listeltselectionne[0].innerHTML = "A";
+  //     listeltselectionne[0].classList.add("marque");
+  //     listeltselectionne[1].innerHTML = "A";
+  //     listeltselectionne[1].classList.add("marque");
+  //     let ident1=listeltselectionne[1].id;
+  //     //console.log(ident1);
+  //     //console.log(obj2);
+  //     Object.defineProperty(obj2, "carteid2", {
+  //       enumerable: false,
+  //       configurable: true,
+  //       writable: false,
+  //       value: ident1
+  //     });
+  //   }
+  //   if(listeltselectionne[2]!=""){
+  //     listeltselectionne[0].innerHTML = "A";
+  //     listeltselectionne[0].classList.add("marque");
+  //     listeltselectionne[1].innerHTML = "A";
+  //     listeltselectionne[1].classList.add("marque");
+  //     listeltselectionne[2].innerHTML = "A";
+  //     listeltselectionne[2].classList.add("marque");
+  //     let ident2=listeltselectionne[2].id;
+  //     //console.log(ident2);
+  //     //console.log(obj3);
+  //     Object.defineProperty(obj3, "carteid3", {
+  //       enumerable: false,
+  //       configurable: true,
+  //       writable: false,
+  //       value: ident2
+  //     });
+  //   }
+  //   if(listeltselectionne[3]!=""){
+  //     listeltselectionne[0].innerHTML = "A";
+  //     listeltselectionne[0].classList.add("marque");
+  //     listeltselectionne[1].innerHTML = "A";
+  //     listeltselectionne[1].classList.add("marque");
+  //     listeltselectionne[2].innerHTML = "A";
+  //     listeltselectionne[2].classList.add("marque");
+  //     listeltselectionne[3].innerHTML = "A";
+  //     listeltselectionne[3].classList.add("marque");
+  //     let ident3=listeltselectionne[3].id;
+  //     //console.log(ident3);
+  //     //console.log(obj4);
+  //   Object.defineProperty(obj4, "carteid4", {
+  //       enumerable: false,
+  //       configurable: true,
+  //       writable: false,
+  //       value: ident3
+  //     });
+  //   }
+  //   //console.log(listeltselectionne);
+  //   document.querySelector("#nombrecarteSelected").textContent = "vous avez selectionné " + priorite.length + " " + "cartes";
+  //   //console.log(priorite.length);
+  //   if (priorite.length >= 4) {
+  //     document.querySelector("#nombrecarteSelected").style.fontSize = "3em";
+  //     document.querySelector("#nombrecarteSelected").textContent = "VOUS AVEZ SELECTIONNE 4 CARTES!!! c'EST SUFFISANT";
+
+  //   }
   
+    
+  //   //console.log(obj2);
+  //  Object.defineProperty(paquetref, "carte1", {
+  //     enumerable: false,
+  //     configurable: true,
+  //     writable: false,
+  //     value: obj1.carteid1
+  //   });
+   
+   
+  //    Object.defineProperty(paquetref, "carte2", {
+  //     enumerable: false,
+  //     configurable: true,
+  //     writable: false,
+  //     value: obj2.carteid2
+  //   });
+    
+  //   Object.defineProperty(paquetref, "carte3", {
+  //     enumerable: false,
+  //     configurable: true,
+  //     writable: false,
+  //     value: obj3.carteid3
+  //   });
+  //   Object.defineProperty(paquetref, "carte4", {
+  //     enumerable: false,
+  //     configurable: true,
+  //     writable: false,
+  //     value: obj4.carteid4
+  //   });
+  //   //console.log(paquetref);
+  //   for (let i = 0; i < 5; i++) {
+  //     if (listeltselectionne[i] != "") {
+  //       listeltselectionne[i].innerHTML = "A";
+  //       listeltselectionne[i].classList.add("marque");
+
+
+  //     }
+     
+  //   }
+
+  // }
   // }
   tirage(){
   
@@ -284,11 +409,8 @@ console.log(listurl);
      //console.log(urlselect, I);
  
      if (paqueturlbase === url[0]||paqueturlbase===url[1]||paqueturlbase===url[2]) {
-       //console.log(paqueturlbase, typeof (paqueturlbase));
-      //  listurl = ['http://localhost:3051/api/paquet1', 'http://localhost:3051/api/paquet1.1', 'http://localhost:3051/api/paquet1.2', 'http://localhost:3003/paquet1.3', 'http://localhost:3003/paquet1.4'];
-      // let listurl2 =['http://localhost:3051/api/paquet2', 'http://localhost:3051/api/paquet2.1', 'http://localhost:3051/api/paquet2.2', 'http://localhost:3003/paquet2.3', 'http://localhost:3003/paquet2.4'];
-      // let listurl3 =['http://localhost:3051/api/paquet3', 'http://localhost:3051/paquet3.1', 'http://localhost:3003/paquet3.2', 'http://localhost:3003/paquet3.3', 'http://localhost:3003/paquet3.4']
-       I = 0;
+      
+      I = 0;
  
        console.log(listurl);
        nbreurl = listurl.length;
@@ -306,6 +428,10 @@ console.log(listurl);
          //console.log(obj1);
  
         premiertirage.addEventListener('click', function () {
+          
+        
+        // () => {
+          // this.premiertirage();
            //console.log(obj1);
            Object.defineProperty(obj1, "configuration", {
              enumerable: false,
@@ -465,6 +591,29 @@ console.log(listurl);
      }
  
    }
+  //  premiertirage(){
+  //   let paquetref = this.state.paquet[0];
+  //   let paqueturl = this.state.paquet;
+  //   let paqueturlbase = paqueturl[0].url;
+  //   let obj1 = {};
+  //   let urlcas = paqueturlbase;
+  //   Object.defineProperty(obj1, "configuration", {
+  //     enumerable: false,
+  //     configurable: true,
+  //     writable: false,
+  //     value: urlcas
+  //   });
+  //   //console.log(paquetref);
+  //   Object.defineProperty(paquetref, 'configuration', {
+  //     value: obj1.configuration,
+  //     configurable: true,
+  //     writable: false
+  //   });
+  //   //console.log(urlcas, obj1.configuration);
+  //  derouler(urlcas)
+  //   //console.log(derouler(urlcas));
+
+  //  }
 
   }
 
