@@ -1,0 +1,2 @@
+let listurl2 =['http://localhost:3051/api/paquet2', 'http://localhost:3051/api/paquet2.1', 'http://localhost:3051/api/paquet2.2', 'http://localhost:3003/paquet2.3', 'http://localhost:3003/paquet2.4'];
+export default listurl2;

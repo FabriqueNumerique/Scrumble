@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu</title>
+
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/scrumble.css">
+    <link rel="stylesheet" href="../assets/css/jeu.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="myBtn"> Session de jeu</button>
+    <!-- <div>
+        <input type="checkbox" name="toogle" id="toogle" />
+        <div id="volet">
+
+            <ul>
+                <li id="containerdutchat">
+                    <div class="join-container" id="zoneform">
+                        <div class="join-header">
+                            <h3><i class="fas fa-smile"></i> Zone de conversation</h3>
+                        </div>
+                        <main class="join-main">
+                            <form action="" id="entretchat">
+                                <div class="form-control">
+                                    <label for="username" class="list"> Nom des Joueurs</label>
+                                    <select name="room" id="username">
+                                        <option value="Joueur1">Joueur1</option>
+                                        <option value="Joueur2">Joueur2</option>
+                                        <option value="Joueur3">Joueurs3</option>
+                                      
+                                    </select>
+                                   <input
+                                    type="text"
+                                    name="username"
+                                    id="joueurduroom"
+                                    placeholder="Entrer votre nom"
+                                    required 
+                                /> 
+                                </div>
+                                <div class="form-control">
+                                    <label for="room" class="list">Sujet de Conversation</label>
+                                    <select name="room" id="room">
+                                        <option value="General">General</option>
+                                        <option value="Userstories1">Userstories1</option>
+                                        <option value="Userstories2">Userstories2</option>
+                                        <option value="Userstories3">Userstories3</option>
+                                        <option value="Userstories4">Userstories4</option>
+                                        <option value="Jeu">Jeu</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn">Rejoindre</button>
+                            </form>
+                        </main>
+                    </div>
+                </li>
+            </ul>
+
+            <label for="toogle">Tchat</label>
+        </div>
+    </div> -->
+
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div>
+                <div id="usercard">
+                    <p class="formsession"> creer un salon privé: <br>
+                    <form action="" method="post" id="salon">
+                        <label for="fname">Nom du Joueur</label><br>
+                        <input type="text" id="username" name="fname" placeholder="Saisir votre nom d'utilisateur"><br>
+                        <button id="validation">Creer un salon privée en génerant un lien à partager</button>
+                    </form>
+                    </p>
+
+                </div>
+                <p class="repartition">
+                <p>lien:
+                    <span id="link-to-share"></span></p>
+                </p>
+            </div>
+            <div id="cadrechoix" >
+                <!-- <p class="listsession" id="roomcard"> Liste des salons <br>
+
+                <ul id="myUL">
+                    <li>Aucun salon n'est proposé</li>
+                </ul>
+                </p> -->
+            </div>
+
+            <span class="close">x</span>
+        </div>
+
+    </div>
+    <div class="cadretitre">
+
+
+        <div id="titreJeu">
+
+            <span> <a id="cadrefleche" href="/etape4" data-link="/etape4"> &#10094;</a></span>
+            <span>
+                <h2> Bravo!!! vous etes <span id="nmbredejoeur"> 0 </span> joeurs/joeuses à pouvoir tirer les dés en
+                    même temps : <br> <span id="infosocket"> </span>
+                </h2><br>
+                <p> <span id="nameJoeur"></span>
+                    <br> Tirez votre dé
+                    <span id=" donneestestsocket"></span>
+                    <span id="resultatTirage"></span>
+                </p>
+
+            </span>
+
+        </div>
+        <div class="accordionbox">
+            <div>
+                <input id="tab-one" name="myaccordion" type="checkbox" />
+                <label for="tab-one">Voir les differentes Users stories en Cours</label>
+
+                <div class="insidebox">
+                    <div id="listJoueur">
+
+                    </div>
+                    <hr>
+                    <div class="insideboxcadre">
+                        <p class="insideboxtext">Dette Technique</p>
+                        <p style="margin-left: 2% ;margin-right: 2%;">|</p>
+                        <p class="insideboxtextdette" id="dettetech"> </p>
+                        <p style="margin-left: 2% ;margin-right: 2%;">|</p>
+                        <p class="cadrebox"> </p>
+                    </div>
+                    <hr>
+                    <div class="insideboxdetail">
+                        <p class="insideboxtext"> N°Userstorie</p>
+                        <p style="margin-left: 1% ;margin-right: 1%;">|</p>
+                        <p class="insideboxtext">taille:</p>
+                        <p style="margin-left: 2% ;margin-right: 2%;">|</p>
+                        <p class="insideboxtext"> Joueurs </p>
+                    </div>
+                    <p id="listUserstories">
+                  
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <section class="cadreCentrale">
+        <section class="cadreGauche">
+            <article class="cadrejeu">
+                <div id="chartdiv">
+                </div>
+            </article>
+            <article>
+                <div id="rejetcartedayli" class="dashed">
+                    <div class="rebmaincontainer">
+                        <div class="thecarde" id="carterebu">
+
+                        </div>
+                    </div>
+                </div>
+                <p>
+                <div id="backapion">
+
+                </div>
+                </p>
+
+            </article>
+        </section>
+        <section class="cadreDroite">
+
+            <article class="pistede dice" id="ref">
+
+            </article>
+            <div class="explication">
+                cliquez sur un des paquets puis sur la carte dans le cadre et enfin sur la petite croix une fois la
+                carte lue.
+            </div>
+            <article class="piste">
+                <p>
+                <div class="cadrecarte">
+                    <p> Dayli </p>
+                    <p class="formegeom color1" id="carteday"></p>
+                </div>
+                <div class="cadrecarte">
+                    <p> revue </p>
+                    <p class="formegeom color2" id="carterev"></p>
+                </div>
+                <div class="cadrecarte">
+                    <p> Probleme </p>
+                    <p class="formegeom color3" id="cartepb"></p>
+                </div>
+                </p>
+            </article>
+            <article class="pistecard" id="pistegrcarte">
+
+
+                <div class="maincontainer">
+                    <div class="thecard" id="carte">
+
+                    </div>
+                </div>
+
+            </article>
+            <!-- <div>
+                <h3 class="titre"> DayliCard
+                    <br> <span> validez votre lecture en cliquant sur la croix en bas de carte </span>
+                </h3>
+               
+                <h3 class="titre"> RevueCard <br> <span> validez votre lecture en cliquant sur la croix en bas de carte
+                    </span></h3>
+                <article class="pistecard">
+                    <div class="maincontainer">
+                        <div class="thecard" id="carte2">
+                            <div class="thefront"></div>
+                            <div class="back">
+                                <h3> Titre1</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem expedita, officia,
+                                    eum corporis suscipit nemo optio iure nam voluptate, quisquam accusamus nesciunt
+                                    amet illum veniam assumenda eos possimus laborum!</p>
+                                <p class="croix" id="interet"> +</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div> -->
+        </section>
+
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+
+
+</html>

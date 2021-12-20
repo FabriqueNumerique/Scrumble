@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/scrumble.css">
+    <link rel="stylesheet" href="../assets/css/etape3.css">
+   
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+</head>
+
+
+<section >
+
+    <h1>PREPARER LE JEU</h1>
+
+    <h2> 3 - Estimation des users stories</h2>
+    <p class="soustitre"> Afficher le modele de carte en cliquant sur Afficher!!! Ceci est un tirage automatique, vous pouvez le relancer en
+        cliquant sur ... ‘relancer’</p>
+        <p class="soustitre"> cliquer sur les cartes selon l'ordre de priorité que vous avez décidé</p>
+        <p class="soustitre" id="nombrecarteSelected">  </p>
+    <a class="next" href="/etape4" data-link="/etape4">&#10095;</a>
+
+
+    <div class="cadrespeciale">
+        <div class="eltspecial">
+            <div class="ordonnee">
+                <div class="rectangle">
+                    <span class="span1">&#x2605;</span> <span >&#x2605;</span> <span >&#x2605;</span> <span >&#x2605;</span>
+                    <span>&#x2605;</span></div>
+                <div class="rectangle2">
+                    <span >&#x2605;</span> <span >&#x2605;</span> <span >&#x2605;</span> <span >&#x2605;</span> </div>
+                <div class="rectangle3">
+                    <span >&#x2605;</span> <span >&#x2605;</span> <span >&#x2605;</span> </div>
+                <div class="rectangle4">
+                    <span >&#x2605;</span> <span >&#x2605;</span> </div>
+                <div class="rectangle5">
+                    <span >&#x2605;</span>
+                </div>
+            </div>
+            <div  class="carre">
+                <div class="cadrillage" id="ref" data-sortable=".forme">
+                   
+                </div>
+               
+            </div>
+        </div>
+        <div>
+            <div class="abscisse">
+                <div  class="rectangleB">XS</div>
+                <div class="rectangleB">S</div>
+                <div class="rectangleB">L</div>
+                <div class="rectangleB">M</div>
+                <div class="rectangleB">XL</div>
+            </div>
+        </div>
+    </div>
+    <div class="misenforme">
+        <button class="btn3" id="devoiler">Afficher</button>
+        <button class="btn3" id="plus">Relancer</button>
+        <button class="btn2">Revenir</button>
+    
+        <button class="btn"> <a href="/etape4" data-link="/etape4"> Finaliser la
+                prépartion</a>
+        </button>
+    </div>
+</section>
+  
+
+</html>

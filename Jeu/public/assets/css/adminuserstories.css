@@ -1,0 +1,14 @@
+h4{
+    margin-bottom: 1%;
+    text-align: center;
+    font-size: 1.5em;;
+    
+}
+#myForm{
+    padding-top: -20%;
+    width:100%;
+    /* border:  1px solid hotpink; */
+}
+td{
+    width:2em;
+}

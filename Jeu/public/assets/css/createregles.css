@@ -1,0 +1,32 @@
+#myFile, #myVideo{
+    margin-left: 15%;
+}
+.repartitionVert {
+    display: flex;
+    flex-direction: column;
+  }
+  .position{
+      margin-left: 20%;
+  }
+  #textarea{margin-left: 20%;
+}
+#titre{
+   margin-top:0%;
+}
+#resume{
+    margin-top:-33%;
+}
+.btnregles{
+    background-color: #FAF5BC;
+    color: black;
+    margin-left: 0;
+    padding: 25px 75px;
+    margin-top: 1%;
+    border-radius: 50px;
+    height: 5em;
+    margin-bottom: 2%;
+}
+#reglecadre{
+    margin-top:-5%;
+  }
+ 

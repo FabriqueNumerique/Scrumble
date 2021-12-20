@@ -1,0 +1,108 @@
+
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Etap4</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link rel="stylesheet" href="../assets/css/scrumble.css">
+  <link rel="stylesheet" href="../assets/css/etape4Jeu.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+</head>
+
+<body style="overflow-x: hidden;">
+
+  
+  <section style="margin-top:2%; margin-bottom:20%;">
+    <a class="prev" href="/etape3" data-link="/etape3">&#10094;</a>
+
+    <h1>Etape du jeu</h1>
+
+    <h2> 4 - Le items de votre sprint</h2>
+    <p style="text-align:center;font-size:0.7em"> Tableaux Kanban de suivi de vos items</p>
+    <p style="text-align:center;font-size:0.7em"> Deplacer vos cartes dans le sens ascendant (a faire puis en cours puis terminé mais pas a faire puis en cours puis de nouveaux a faire) </p>
+    <a class="next" href="/jeu" data-link="/jeu">&#10095;</a>
+
+    <div class="app">
+
+      <div class="lists">
+        <!-- Correspond a container des 3 colonnes-->
+        <!-- Correspond a colonne -->
+        <div class="list" id="depart" data-stat="depart"
+          style="width: 25%;height:65em;margin-left:3%; border-radius: 25px; margin-bottom: 10%; background-color: #475158; ">
+          <!-- <div class="case"  style="margin-left: 9%;padding-top: 2%;border:solid 2px green;">A FAIRE</div> -->
+          <!-- <p  style="width:100%;margin-top:4%;margin-left: 0%; border:solid 10px black"> -->
+<!-- 
+            <div class="list-item" draggable="true" style="margin-left:0% ;border:2px solid white;">
+               
+              <div class="box" style="width:18em;height:12em;margin-top:4%;margin-left: 12%; border:solid 10px black">
+              
+              <div class="containerimg"></div>
+              <h3 class="titreCard"> Titre 1</h3>
+              <p class="texteCard"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem maxime earum
+                repele culpa alias labore</p>
+
+              </div>
+            </div>
+
+          <div class="list-item" draggable="true" style="margin-left:0%;">
+            <div class="box" style="width:18em;height:12em;margin-top:4%;margin-left: 12%;">
+              <div class="containerimg"></div>
+              <h3 class="titreCard"> Titre 2</h3>
+              <p class="texteCard"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem maxime earum
+                repele culpa alias labore</p>
+
+            </div>
+          </div>
+
+          <div class="list-item" draggable="true" style="margin-left:0%;">
+            <div class="box" style="width:18em;height:12em;margin-top:4%;margin-left: 12%;">
+              <div class="containerimg"></div>
+              <h3 class="titreCard"> Titre 3</h3>
+              <p class="texteCard"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem maxime earum
+                repele culpa alias labore</p>
+
+            </div>
+          
+          </div> -->
+    <!-- </p> -->
+        </div>
+        <!-- colonne 2 a EN COURS -->
+        <div class="list" id="encours" data-stat="encours"
+          style="width: 25%;height:65em;margin-left:2%; border-radius: 25px; margin-bottom: 10%; background-color: #475158;">
+          <div class="case"  style="margin-left: 9%;padding-top: 2%;">EN COURS</div>
+          <!-- Correspond a block ou je range les elements -->
+
+        </div>
+        <div class="list" id="termine" data-stat="termine"
+          style="width: 25%;height:65em;margin-left:2%; border-radius: 25px; margin-bottom: 10%; background-color: #475158;">
+          <div class="case"  style="margin-left: 9%;padding-top: 2%;">TERMINE</div>
+          <!-- Correspond a block ou je range les elements -->
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <div style="display: flex; flex-direction:row;margin-bottom: 5%;margin-left:33%;">
+    <button class="btn2"
+      >Revenir</button>
+    <button class="btn" 
+      ><a href="/jeu" data-link="/jeu"> La
+        suite </a></button>
+  </div>
+
+
+
+
+
+  
+</body>
+
+</html>

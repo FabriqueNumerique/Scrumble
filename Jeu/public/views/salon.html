@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="../assets/css/salon.css">
+    <!-- <link rel="stylesheet" href="../assets/css/scrumble.css"> -->
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title> Titre salon </title>
+
+</head>
+
+<body>
+    <h1> Creer ou Rejoindre un salon : </h1>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 offset-md-3">
+
+                <div class="card mb-3" id="user-card">
+                    <p class="card-body">
+
+                    <form id="form">
+                        <p class="mb-3">
+
+                            <label for="username" class="form-label">Nom d'utilisateur</label>
+                            <input type="text" class="form-control" id="username" minlength="2" maxlength="20"
+                                placeholder="Saisir votre nom d'utilisateur" required>
+                        </p>
+                        <button class="btn" id="start" type="submit">Créer un salon privée</button>
+                    </form>
+
+                    </p>
+                </div>
+
+                <p class="card mb-3 d-none" id="rooms-card">
+                     <p class="card-header">Salons disponibles</p>
+                        <ul class="list-group list-group-flush" id="rooms-list">
+                            <li> Aucun salon n'a encore été crée</li>
+                        </ul>
+                </p>
+
+                <p class="d-none" id="waiting-area">
+                    <!-- <p class="card mb-3">
+                         <p class="card-header">En attente d'un autre joueur</p>
+                            <p class="card-body mx-auto">
+                                <p class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </p>
+                            </p> 
+                    </p>-->
+
+                    <!-- <p class="card">
+                        <p class="card-body text-center"> Partage ce lien pour inviter quelqu'un à jouer avec toi
+                        <span id="link-to-share"></span> </p>
+                    </p> -->
+                </p>
+
+                <div class="card d-none" id="game-card">
+                    <!-- <p class="card-header">
+                        jEU
+                    </p> -->
+
+
+                    <div class="text-center d-none mt-2" id="restart-area">
+                        <input class="btn btn-primary" id="restart" type="button" value="Rejouer">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
