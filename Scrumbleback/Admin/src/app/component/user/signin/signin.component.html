@@ -1,0 +1,48 @@
+<app-navbarold></app-navbarold>
+<section>
+  <article>
+    <h2>RGPD:</h2>
+    <p>
+     <span> L </span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum </p>
+  </article>
+  <article class="article2">
+    <h1> Connexion</h1>
+    <form #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+     
+      <label> votre email:</label><br>
+      <input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email"
+        [pattern]="emailRegex" required value=" " [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }">
+      <div *ngIf="signInForm.submitted && email.errors?.pattern">
+        <label class="validation-message">Invalid email address.</label>
+      </div><br>
+      <label> votre mot de passe:</label><br>
+      <input type="password" name="password" value=" " #password="ngModel" [(ngModel)]="model.password" placeholder="Password"
+        required minlength="4" [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }">
+      <div *ngIf="signInForm.submitted && password.errors?.minlength">
+        <label class="validation-message">Minimum 4 characters.</label>
+      </div>
+      <input type="submit" value="Sign In">
+    </form>
+    <div>  
+      Pas encore de compte:<br>
+      <a routerLink='/signup'>
+      Inscrivez-vous 
+      </a>
+    </div>
+  </article>
+
+  <!-- Error message -->
+  <div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+  </div>
+  
+</section>
+<app-footer></app-footer>

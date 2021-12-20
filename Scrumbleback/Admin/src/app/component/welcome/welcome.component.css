@@ -1,0 +1,21 @@
+section{
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 33%;
+    border: solid 5px white;
+    width: 33%;
+    padding: 5%;
+}
+.btn2 {
+    background-color: rgb(251, 173, 37);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 5%;
+  }

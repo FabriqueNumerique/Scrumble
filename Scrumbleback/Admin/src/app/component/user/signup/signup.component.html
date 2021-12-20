@@ -1,0 +1,65 @@
+<app-navbarold></app-navbarold>
+<section>
+  <article>
+    <h2>RGPD:</h2>
+    <p>
+     <span> L </span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum </p>
+  </article>
+  <article class="article2">
+        <h1> Inscription:</h1>
+        <div>
+            <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+              <label> votre nom complet </label>
+              <input type="text" value="" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" name="fullName" placeholder="Full Name"
+              required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">
+              <div *ngIf="signUpForm.submitted && !fullName.valid">
+                <label class="validation-message">This field is required.</label>
+              </div>
+              <label> votre mail</label>
+                <input type="mail" value="" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" placeholder="Email"
+                required [pattern]="emailRegex"  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+                <div *ngIf="signUpForm.submitted && email.errors">
+                  <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+                  <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+                </div>
+                <label> votre mot de passe</label>
+                <input type="password" value="" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+                minlength="8" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+                
+                <div *ngIf="signUpForm.submitted && password.errors">
+                  <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+                  <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 8 characters.</label>
+                </div>
+
+                <input type="hidden" #role="ngModel" [(ngModel)]="userService.selectedUser.role" name="role">
+                
+                <input type="submit" value="Sign Up">
+              </form>
+              <div >  
+                 vous avez un compte:<br>
+                <a routerLink='/'>
+                connectez-vous! 
+                </a>
+              </div>
+              <!-- Success message -->
+              <div class="success" *ngIf="showSucessMessage">
+                Saved successfully
+              </div>
+              
+              <!-- Error message -->
+              <div class="alert" *ngIf="serverErrorMessages">
+                {{serverErrorMessages}}
+              </div>
+        </div>
+      </article>
+
+    </section>
+<app-footer></app-footer>

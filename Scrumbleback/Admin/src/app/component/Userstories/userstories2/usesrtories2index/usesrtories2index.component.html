@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+  <article class="container">
+    <h1>Gestion des Userstories</h1>
+    <p> Gestion du paquet 2.0</p>
+
+    <a href="#" routerLink="/usesrtories2create" class="btn2">Creer une nouvelle Userstorie </a>
+    <a href="#" routerLink="/choix" class="btn2" style="margin-left: 2%;">retour a la selection </a>
+    <br> <br> <br>
+    <table class="table">
+      <tr class="cadretitre">
+        <th>ID</th>
+        <th>numero</th>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>image</th>
+        <th>Dependance</th>
+        <th>dposition</th>
+        <th>taille/value</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let userstorie of userstories" class="cadreinfo">
+        <td>{{ userstorie._id }}</td>
+        <td>{{ userstorie.id }}</td>
+        <td>{{ userstorie.titre }}</td>
+        <td>{{ userstorie.contenu }}</td>
+        <td> <img src='./assets/img/{{ userstorie.img }}'alt="image"> <br>{{ userstorie.img }}</td>
+        <td>{{ userstorie.Dependance }}</td>
+        <td>{{ userstorie.dposition }}</td>
+        <td>{{ userstorie.taille }}/{{userstorie.value}}</td>
+        <td>
+        
+          <a href="#" [routerLink]="['/usesrtories2gestion/', userstorie._id, 'edit', {postId: userstorie._id}]" class="btn">EDIT</a>
+
+          <a class="action-btn" (click)="deleteUserstories(userstorie._id)" class="btn2">
+            DELETE
+          </a>
+        </td>
+      </tr>
+    </table>
+  </article>
+ 
+
+<app-footer></app-footer>

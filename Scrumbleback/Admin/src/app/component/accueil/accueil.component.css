@@ -1,0 +1,27 @@
+body{
+  
+   background-size: 55%;
+   background-repeat: no-repeat; 
+}
+
+section {
+    margin-left: 66%;
+    margin-top: 5%;
+ }
+
+input[type=button] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    margin-top: 1%;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  h1{
+      font-size: xx-large;
+  }
+  p>span{
+font-size: x-large;
+  }

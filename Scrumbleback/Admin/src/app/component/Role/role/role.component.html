@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+  <article class="container">
+    <h1>Gestion des Roles des Utilisateurs:</h1>
+
+    
+    <br> <br> <br>
+    <table class="table">
+      <tr class="cadretitre">
+        <th>ID</th>
+        <th>Nom</th>
+        <th>email</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let rol of role" class="cadreinfo">
+        <td>{{ rol._id }}</td>
+        <td>{{ rol.fullName }}</td>
+        <td>{{ rol.email}}</td>
+        <td> <p>{{rol.role}}</p> </td>
+     
+        <td>
+          <!-- <a href="#" [routerLink]="['/post/', post._id, 'view']" class="btn btn-info">View</a>-->
+          <a href="#" [routerLink]="['/role/', rol._id, 'edit', {postId: rol._id}]" class="btn">EDIT</a>
+
+          <a class="action-btn" (click)="deletePost(rol._id)" class="btn2">
+            DELETE
+          </a> 
+        </td>
+      </tr>
+    </table>
+  </article>
+ 
+
+<app-footer></app-footer>

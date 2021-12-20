@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+  <article class="container">
+    <h1>Gestion des cartes Daylicartes</h1>
+
+    <a href="#" routerLink="/pbcartecreate" class="btn2">Creer une nouvelle carte </a>
+    <br> <br> <br>
+    <table class="table">
+      <tr class="cadretitre">
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let post of cartes"class="cadreinfo">
+        <td>{{ post._id }}</td>
+        <td>{{ post.titre }}</td>
+        <td>{{ post.contenu }}</td>
+        <td>
+          <!-- <a href="#" [routerLink]="['/post/', post._id, 'view']" class="btn btn-info">View</a>-->
+          <a href="#" [routerLink]="['/daylicarte/', post._id, 'edit', {postId: post._id}]" class="btn">EDIT</a>
+
+          <a class="action-btn" (click)="deletePost(post._id)" class="btn2">
+            DELETE
+          </a>
+        </td>
+      </tr>
+    </table>
+  </article>
+ 
+
+<app-footer></app-footer>

@@ -1,0 +1,14 @@
+{
+    "development": {
+        "PORT": 3051,
+        "MONGODB_URI": "mongodb+srv://scrumblebdd:scrumblebdd@cluster0.lj6rw.mongodb.net/scrumble;",
+        "JWT_SECRET": "alliancereseauxpixysecolesimplonfabriquenumeriquepaloise",
+        "JWT_EXP": "15m"
+    },
+    "production": {
+        "PORT": 80,
+        "MONGODB_URI": "mongodb://xxxxx/DB_Name",
+        "JWT_SECRET": "alliancereseauxpixysecolesimplonfabriquenumeriquepaloise",
+        "JWT_EXP": "15m"
+    }
+}

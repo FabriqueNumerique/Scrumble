@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<div class="container">
+   
+  
+    <a href="#" routerLink="/userstories1gestion" class="btn2">Accueil</a>
+        
+         <h2>Creer une nouvelle userstorie</h2>
+         <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="form-group">
+                <label for="id">n°id</label>
+                <input 
+                    formControlName="id"
+                    id="id" 
+                    type="number" 
+                    class="form-control">
+                <div *ngIf="f.id.touched && f.id.invalid" class="alert alert-danger">
+                    <div *ngIf="f.id.errors?.required">id is required.</div>
+                </div>
+            </div>
+             <div class="form-group">
+                 <label for="titre">titre:</label>
+                 <input 
+                     formControlName="titre"
+                     id="titre" 
+                     type="text" 
+                     class="form-control">
+                 <div *ngIf="f.titre.touched && f.titre.invalid" class="alert alert-danger">
+                     <div *ngIf="f.titre.errors?.required">titre is required.</div>
+                 </div>
+             </div>
+             <div class="form-group">
+                <label for="titre">image:(nom en caractère et extensions)</label>
+                <input 
+                    formControlName="img"
+                    id="img" 
+                    type="text" 
+                    class="form-control">
+                <div *ngIf="f.img.touched && f.img.invalid" class="alert alert-danger">
+                    <div *ngIf="f.img.errors?.required">img is required.</div>
+                </div>
+            </div>
+            <div style="display:flex; flex-direction: row;">
+                <div class="form-group">
+                    <label for="titre">Dependance:</label>
+                    <input 
+                        formControlName="Dependance"
+                        id="Dependance" 
+                        type="number" 
+                        class="form-control cas">
+                    <div *ngIf="f.Dependance.touched && f.Dependance.invalid"  class="alert alert-danger">
+                        <div *ngIf="f.Dependance.errors?.required">Dependance is required.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="titre">dposition</label>
+                    <input 
+                        formControlName="dposition"
+                        id="dposition" 
+                        type="number" 
+                        class="form-control">
+                    <div *ngIf="f.dposition.touched && f.dposition.invalid"  class="alert alert-danger">
+                        <div *ngIf="f.dposition.errors?.required">dposition is required.</div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex; flex-direction: row;">
+                <div class="form-group" >
+                    <label for="titre">Taille: (★ ★ ★ ★ ★ / ★ ★ ★ ★ / ★ ★ ★ / ★ ★ / ★ )</label>
+                    <input 
+                        formControlName="taille"
+                        id="taille" 
+                        type="text" 
+                        class="form-control cas">
+                    <div *ngIf="f.taille.touched && f.taille.invalid"  class="alert alert-danger">
+                        <div *ngIf="f.taille.errors?.required">Taille is required.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="titre"> Value: (XS / S / L / M / XL)</label>
+                    <input 
+                        formControlName="value"
+                        id="value" 
+                        type="text" 
+                        class="form-control">
+                    <div *ngIf="f.value.touched && f.value.invalid"  class="alert alert-danger">
+                        <div *ngIf="f.value.errors?.required">value is required.</div>
+                    </div>
+                </div>
+            </div>
+             <div class="form-group">
+                 <label for="body">contenu</label>
+                 <textarea 
+                     formControlName="contenu"
+                     id="body" 
+                     type="text" 
+                     class="form-control">
+                 </textarea>
+                 <div *ngIf="f.contenu.touched && f.contenu.invalid" class="alert alert-danger">
+                     <div *ngIf="f.contenu.errors?.required">contenu is required.</div>
+                 </div>
+             </div>
+       
+             <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+         </form>
+     </div>
+     <app-footer></app-footer>

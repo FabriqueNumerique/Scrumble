@@ -1,0 +1,97 @@
+h1,
+p {
+  text-align: center;
+}
+
+p {
+  font-size: large;
+}
+
+table {
+  border-collapse: collapse;
+  border: none;
+  width: 50%;
+  margin-left: 27%;
+}
+
+.table td,
+.table th {
+  border: 1px solid #2b2d31;
+  padding: 8px;
+}
+
+.table tr {
+  background-color: transparent;
+  margin-top: 2%;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.container {
+  margin-bottom: 5%;
+}
+
+.btn {
+  background-color: rgb(77, 200, 52);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 2px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+}
+
+.btn2 {
+  background-color: rgb(251, 173, 37);
+  /* Green */
+  border: none;
+  color: black;
+  padding: 2px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+
+a {
+  text-decoration: none;
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+.btn3 {
+  background-color: #FAF5BC;
+  color: black;
+  margin-left: 0;
+  padding: 25px 75px;
+  margin-top: 10%;
+  border-radius: 50px;
+  height: 5em;
+
+}
+
+.btn4 {
+  background-color: #202525;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 85%;
+  border-radius: 12px;
+  padding: 0.2em 1.0em;
+  color: white;
+  cursor: pointer;
+}

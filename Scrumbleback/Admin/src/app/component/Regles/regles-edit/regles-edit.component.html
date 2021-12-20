@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1>Mettre a jour une carte:</h1>
+  
+    <a href="#" routerLink="/regle" class="btn2">Accueil</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="titre">Titre:</label>
+            <input 
+                formControlName="titre"
+                id="titre" 
+                type="text" 
+                [(ngModel)]="regle.titre"
+                class="form-control">
+            <div *ngIf="f.titre.touched && f.titre.invalid" class="alert alert-danger">
+                <div *ngIf="f.titre.errors?.required">Titre is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="titre">image (terminaison:xxx.png, xxx.jpg,etc...):</label>
+            <input 
+                formControlName="img"
+                id="img" 
+                type="text" 
+                [(ngModel)]="regle.img"
+                class="form-control">
+            <div *ngIf="f.img.touched && f.img.invalid" class="alert alert-danger">
+                <div *ngIf="f.img.errors?.required">img is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="titre">video (terminaison:xxx.mp4, xxx.jpg,etc...):</label>
+            <input 
+                formControlName="video"
+                id="video" 
+                type="text" 
+                [(ngModel)]="regle.video"
+                class="form-control">
+            <div *ngIf="f.video.touched && f.video.invalid" class="alert alert-danger">
+                <div *ngIf="f.video.errors?.required">video is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="contenu">Resumé:(texte de 5 lignes )</label>
+            <textarea 
+                formControlName="texte"
+                id="texte" 
+                type="text" 
+                [(ngModel)]="regle.texte"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f.texte.touched && f.texte.invalid" class="alert alert-danger">
+                <div *ngIf="f.texte.errors?.required">texte is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="contenu">contenu</label>
+            <textarea 
+                formControlName="contenu"
+                id="contenu" 
+                type="text" 
+                [(ngModel)]="regle.contenu"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f.contenu.touched && f.contenu.invalid" class="alert alert-danger">
+                <div *ngIf="f.contenu.errors?.required">contenu is required.</div>
+            </div>
+        </div>
+        
+        <button class="btn" type="submit" [disabled]="!form.valid">Update</button>
+    </form>
+</div>
+<app-footer></app-footer>

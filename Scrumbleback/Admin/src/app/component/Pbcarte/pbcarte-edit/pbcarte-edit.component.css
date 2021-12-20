@@ -1,0 +1,28 @@
+.btn2 {
+    background-color: rgb(251, 173, 37);
+    color: black;
+    padding: 7px 20px;
+    margin-bottom: 10%;
+   
+    border-radius: 1px;
+    height: 2em;
+    width: 10em;
+  }
+  textarea,input{
+    width: 100%;
+    height: 18em;
+    color:white;
+    
+}
+.btn {
+    background-color: rgb(77, 200, 52);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+  }
