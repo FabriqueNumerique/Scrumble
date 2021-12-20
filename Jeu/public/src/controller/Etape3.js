@@ -8,7 +8,8 @@ export default class Etape3 extends Controller {
     super();
 
     document.title = "Etape3:Backlog";
-console.log(listurl);
+
+
      this.afficher();
      this.tirage();
      this.premiertirage();
@@ -26,6 +27,7 @@ console.log(listurl);
     let obj2 = {};
     let obj3 = {};
     let obj4 = {};
+
     const cadrillage = document.getElementById("ref");
     //console.log(cadrillage);
 
@@ -591,29 +593,7 @@ console.log(listurl);
      }
  
    }
-  //  premiertirage(){
-  //   let paquetref = this.state.paquet[0];
-  //   let paqueturl = this.state.paquet;
-  //   let paqueturlbase = paqueturl[0].url;
-  //   let obj1 = {};
-  //   let urlcas = paqueturlbase;
-  //   Object.defineProperty(obj1, "configuration", {
-  //     enumerable: false,
-  //     configurable: true,
-  //     writable: false,
-  //     value: urlcas
-  //   });
-  //   //console.log(paquetref);
-  //   Object.defineProperty(paquetref, 'configuration', {
-  //     value: obj1.configuration,
-  //     configurable: true,
-  //     writable: false
-  //   });
-  //   //console.log(urlcas, obj1.configuration);
-  //  derouler(urlcas)
-  //   //console.log(derouler(urlcas));
 
-  //  }
 
   }
 

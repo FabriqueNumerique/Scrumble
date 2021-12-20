@@ -149,21 +149,7 @@ traitement(){
 
     }
 
-    //console.log(this.state);
 
-// let paquetcarte=this.state.paquet[0];
-//     //console.log(paquetcarte);
-//     let dettetechpos=["DETTE INEXISTANTE x3","DETTE FAIBLE x4","DETTE MOYENNE x5"];
-//     let nombreposdette=Math.trunc(Math.random()*3);
-//     //console.log(nombreposdette);
-//   let dette=dettetechpos[nombreposdette];
-//   //console.log(dette);
-//   Object.defineProperty(urlchoisi[0], "dettetechnique", {
-//     enumerable: false,
-//     configurable: true,
-//     writable: false,
-//     value: dette
-//   });
   }
 createloadCharacters1() {
   console.log(url[0]) 

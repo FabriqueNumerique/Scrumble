@@ -6,56 +6,55 @@ export default class Etape4 extends Controller {
         super();
         document.title = "Etape4:Tableau Kanban";
         this.fetch();
-        // this.stautchange1();
+        
         console.log(this.state.paquet);
     }
-    
+   
     fetch(){
-
+    
 
       let config = this.state.paquet[0];
-      //console.log(config);
-      let carteid1 = config.carte1;
-      const valuecarteid1 = parseInt(carteid1);
-      //console.log(valuecarteid1);
-      let carteid2 = config.carte2;
-      const valuecarteid2 = parseInt(carteid2);
-      //console.log(valuecarteid2);
-      let carteid3 = config.carte3;
-      const valuecarteid3 = parseInt(carteid3);
-      //console.log(valuecarteid3);
-      let carteid4 = config.carte4;
-      const valuecarteid4 = parseInt(carteid4);
-      //console.log(valuecarteid4);
-      const configurationcarte = config.configuration;
-   
-
-      // rien a voir avec le fetch ceci est pour 
-      // l'interieur du fetch, sert a identifier les sous-elements a partir du titre
-
-      let urlch = configurationcarte + '/';
-      //console.log(urlch);
-
-      let carte1 = urlch + config.carte1;
-      let carte2 = urlch + config.carte2;
-      let carte3 = urlch + config.carte3;
-      let carte4 = urlch + config.carte4;
-      //console.log(carte4);
-
-      const urlcarte = [carte1, carte2, carte3, carte4];
+       //console.log(config);
+       let carteid1 = config.carte1;
+       const valuecarteid1 = parseInt(carteid1);
+       //console.log(valuecarteid1);
+       let carteid2 = config.carte2;
+       const valuecarteid2 = parseInt(carteid2);
+       //console.log(valuecarteid2);
+       let carteid3 = config.carte3;
+       const valuecarteid3 = parseInt(carteid3);
+       //console.log(valuecarteid3);
+       let carteid4 = config.carte4;
+       const valuecarteid4 = parseInt(carteid4);
+       //console.log(valuecarteid4);
+       const configurationcarte = config.configuration;
     
-
-      const statut1="afaire";
-      const statut2="encours";
-     const statut3="termine";
-    
-      let eltbase = document.querySelector('#depart');
-      eltbase.innerHTML = ` <div class="case adjustementcase">A FAIRE</div>`;
-      //console.log(eltbase);
-
-
-      let urlchoisi = urlcarte[0];
-
+ 
+       // rien a voir avec le fetch ceci est pour 
+       // l'interieur du fetch, sert a identifier les sous-elements a partir du titre
+ 
+       let urlch = configurationcarte + '/';
+       //console.log(urlch);
+ 
+       let carte1 = urlch + config.carte1;
+       let carte2 = urlch + config.carte2;
+       let carte3 = urlch + config.carte3;
+       let carte4 = urlch + config.carte4;
+       //console.log(carte4);
+ 
+       const urlcarte = [carte1, carte2, carte3, carte4];
+     
+ 
+       const statut1="afaire";
+       const statut2="encours";
+      const statut3="termine";
+     
+       let eltbase = document.querySelector('#depart');
+       eltbase.innerHTML = ` <div class="case adjustementcase">A FAIRE</div>`;
+       //console.log(eltbase);
+ 
+ 
+       let urlchoisi = urlcarte[0];
       function fetchDATA() {
           fetch(config.url).then(response => {
               return response.json();
@@ -337,54 +336,7 @@ export default class Etape4 extends Controller {
 
 
     }
-  //   stautchange1(){
-
-  //     souselement.dataset.statut="afaire";
-  //     souselement.innerHTML=souselement.dataset.statut;
-  //     if (element.id===carteid1 ) {
-    
-  //       Object.defineProperty(config, "carte1statut", {
-  //           enumerable: false,
-  //           configurable: true,
-  //           writable: false,
-  //           value: "afaire"
-  //         });
-  //         //console.log(config);
-  //       } 
-     
-  //   if (element.id===carteid2) {
-  //     //console.log(element.id)
-  //   Object.defineProperty(config, "carte2statut", {
-  //       enumerable: false,
-  //       configurable: true,
-  //       writable: false,
-  //       value: "afaire"
-  //     });
-  //   }
-  // if (element.id===carteid3) {
-  //   //console.log(element.id)
-  // Object.defineProperty(config, "carte3statut", {
-  //     enumerable: false,
-  //     configurable: true,
-  //     writable: false,
-  //     value: "afaire"
-  //   });
-  //   }
-
-  // if (element.id===carteid4) {
-  //     //console.log(element.id)
-  //   Object.defineProperty(config, "carte4statut", {
-  //       enumerable: false,
-  //       configurable: true,
-  //       writable: false,
-  //       value: "afaire"
-  //     });
-  // }
-
-
-
-  //   }
-  //   stautchange2(){}
+  
 
 
   
