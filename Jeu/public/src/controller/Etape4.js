@@ -4,7 +4,7 @@ import Controller from "../core/Controller.js";
 export default class Etape4 extends Controller {
     constructor() {
         super();
-        document.title = "Etape4:Tableau Kanban";
+        document.title = "Scrumble, le tableau Kanban";
         this.fetch();
         
         console.log(this.state.paquet);

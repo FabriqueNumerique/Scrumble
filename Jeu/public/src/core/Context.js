@@ -9,7 +9,9 @@ class Context {
     joueurs: [],
     tours: [],
     paquet:[],
-    
+    stories:[],
+    projets:[],
+    idProjet:[],
     adminuserstories:[]
   };
   // ? Ca ressemble à un développeur qui se la joue mais il faudra vérifier

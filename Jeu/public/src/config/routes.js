@@ -8,11 +8,6 @@ import Etape4 from "../controller/Etape4.js";
 import Jeu from "../controller/Jeu.js";
 import FinduJeu from "../controller/FinduJeu.js";
 
-
-
-
-
-
 import Salon from "../controller/Salon.js";
 import Salon2 from "../controller/Salon2.js";
 export const routes = {
@@ -20,10 +15,6 @@ export const routes = {
         controller: Accueil,
         view: "accueil"
     },
-
-
-  
-  
     "/regles": {
         controller: Regles,
         view: "regles"

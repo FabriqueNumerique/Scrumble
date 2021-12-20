@@ -11,4 +11,4 @@ const schema = mongoose.Schema({
     value:String
 })
 
-module.exports = mongoose.model("Paquet1", schema)
+module.exports = mongoose.model("UserStorie", schema)

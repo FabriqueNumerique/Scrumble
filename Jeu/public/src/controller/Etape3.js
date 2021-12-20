@@ -7,7 +7,7 @@ export default class Etape3 extends Controller {
   constructor() {
     super();
 
-    document.title = "Etape3:Backlog";
+    document.title = "Scrumble, le Backlog";
 
 
      this.afficher();

@@ -5,9 +5,6 @@ export default class Paquet {
     
     constructor(url, dettetechnique){
             this.url=url;
-            this.dettetechnique=dettetechnique;
-            
+            this.dettetechnique=dettetechnique;  
     }
-    
-    
 }

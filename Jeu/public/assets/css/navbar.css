@@ -1,5 +1,5 @@
 
-* {
+nav > * {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -11,7 +11,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 20px;
 }
 
 ul {
@@ -23,12 +23,7 @@ ul {
   overflow: hidden;
   justify-content: left;
   align-items: center;
- 
-
 }
-
-
-
 li a {
   display: block;
   color: white;

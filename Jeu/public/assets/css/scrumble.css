@@ -1,22 +1,62 @@
+
+html, body,
+header,
+section {
+  margin:0;
+}
 body {
   background-color: #2B2D31;
   color: white;
   font-family: 'Raleway';
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
-
+  overflow: hidden;
 }
-
-header,
-section {
-  margin-top: 0%;
-
+body > header, body > main, body > footer{
+  width:100vw;
 }
-
+body > header{
+  height:110px;
+}
+body > footer{
+  height:65px;
+}
+body > main > section{
+  display:flex;
+  flex-flow: column wrap;
+  overflow-y:auto;
+}
+form{
+  display:flex;
+  flex-flow:column nowrap;
+}
 a {
   text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2%;
+  font-weight: normal;
+}
+
+h3 {
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  border: 1px solid black;
 }
 
 .phrase {
@@ -30,7 +70,6 @@ a {
 }
 
 .p2 {
-
   margin-left: 15%;
   margin-right: 1%;
   margin-top: 1%;
@@ -52,64 +91,6 @@ a {
   margin-top: 7%;
   color: black;
   font-size: 2em;
-
-}
-
-.cadre {
-  background-color: #475158;
-  width: 75%;
-  height: 28em;
-  margin-top: 0;
-  margin-left: 10%;
-  border-radius: 25px;
-
-}
-
-.particadre2 {
-  padding-top: 3%;
-  margin-left: 0%;
-}
-
-.cadreconnexion {
-  margin-top: 2.5%;
-  padding-top: 2%;
-  height: 27em;
-  background-color: #475158;
-  width: 60%;
-  margin-left: 20%;
-  border-radius: 25px;
-  margin-bottom: 2%;
-
-}
-
-.repartition {
-  display: flex;
-  flex-direction: row;
-}
-
-section>h1 {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 2%;
-  padding-top: 0%;
-
-}
-
-section>h2 {
-  text-align: center;
-  font-size: 1.3em;
-  margin-bottom: 2%;
-}
-
-article {
-  display: flex;
-  flex-direction: row;
-  width: 85%;
-  margin-top: 0%;
-  margin-left: 10%;
-  margin-right: 5%;
-  border: 1px solid black;
-  height: 38em;
 }
 
 div>h1 {
@@ -118,12 +99,6 @@ div>h1 {
   font-weight: thin;
   padding-top: 2%;
   margin-bottom: 7.5%;
-}
-
-h3 {
-  margin-top: 2%;
-  font-size: 0.9em;
-  margin-left: 5%;
 }
 
 input[type=number],
@@ -168,11 +143,6 @@ input[type=reset] {
   margin-right: 5%;
 }
 
-form>div {
-  margin-left: 0%;
-  margin-top: 1%
-}
-
 form>select {
   margin-left: 20%;
   margin-top: 5%;
@@ -204,18 +174,6 @@ select {
   width: 100%;
   height: 3.2em;
   margin-top: 5%;
-}
-
-.cadreregles {
-  border: none;
-  overflow-y: scroll;
-  width: 90%;
-  height: 27em;
-  background-color: transparent;
-  margin-left: 2%;
-  margin-bottom: 2%;
-  margin-top: 0%;
-
 }
 
 .lienformulaire {
@@ -260,19 +218,6 @@ select {
   margin-right: 10%;
   margin-top: 2%;
   margin-bottom: 2%;
-}
-
-h2 {
-  font-size: 1.0em;
-}
-
-section>h1 {
-  font-size: 2em;
-  margin-top: 2.5%;
-}
-
-section>h2 {
-  font-size: 1.5em;
 }
 
 .boutton {
@@ -415,10 +360,9 @@ div>p {
 .reussite {
   background-color: rgb(77, 200, 52);
   color: white;
-  margin-left: 20%;
   padding: 25px 75px;
   border-radius: 50px;
-  margin-top: 3%;
+  margin:20px auto;
 }
 
 .btn2 {
@@ -444,14 +388,13 @@ div>p {
 
 .btn4 {
   background-color: #202525;
-  /* Green */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-left: 85%;
   border-radius: 12px;
-  padding: 0.2em 1.0em;
+  padding: 5px;
+  margin:10px 20px;
   color: white;
   cursor: pointer;
 }
@@ -575,9 +518,142 @@ li>.rep {
   margin-bottom: 0%;
   padding-top: 5%;
 }
+.selection{
+  border:5px solid green;
+}
+/* PAGE D'ACCUEIL */
+section.accueil{
+  flex-flow:row nowrap;
+  align-content: center;
+}
+section.accueil > article{
+  margin:0;
+  border:0;
+  flex-flow:column nowrap;
+  flex:1;
+  padding-top: 10%;
+}
+section.accueil > article > *{
+  text-align: left;
+  padding-left:30px;
+}
+section.accueil > article:nth-child(1){
+  background-image: url('../img/plateau.png');
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position: 50%;;
+}
+/* PAGE DES REGLES */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-.formchoixjr {
-  margin-right: 10%;
-  height: 21em;
-  overflow-y: scroll;
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color:black;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top:-1%;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+video {
+  width: 33em;
+  height: 50%;
+}
+
+section.cadreregles {
+  border: none;
+  overflow-y: auto;
+  background-color: transparent;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  
+  height:calc(100vh - 300px);
+}
+section.cadreregles > article{
+  max-width:250px;
+  flex-flow:column nowrap;
+  padding:15px;
+  margin: 10px;
+}
+
+.img-regles{
+  width:100%;
+  margin:0;
+  min-height:150px;
+  background:no-repeat 50%;
+  background-size: contain;
+}
+
+/* ETAPE 1 - Préparation du jeu */
+section.préparation{
+
+}
+section.preparation input{
+  text-align: center;
+}
+section.preparation > article > div{
+  padding:15px;
+}
+section.preparation > article > div:nth-child(1){
+  border-right:2px solid black;
+}
+
+section.preparation form > div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+section.preparation > article, section.projets > article {
+  background-color: #475158;
+  border-radius: 25px;
+  margin:auto;
+}
+
+.cadreconnexion {
+  margin-top: 2.5%;
+  padding-top: 2%;
+  height: 27em;
+  background-color: #475158;
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 25px;
+  margin-bottom: 2%;
+}
+ /* PAGE DES PROJETS */
+ section.projets > article {
+  flex-flow:column nowrap;
+  padding: 10px 20px;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+section.projets > article:hover {
+  transform: scale(1.05);
 }

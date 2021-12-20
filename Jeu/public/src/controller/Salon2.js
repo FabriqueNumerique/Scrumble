@@ -23,7 +23,7 @@ export default class Salon extends Controller {
             e.preventDefault();
             let message =messageInput.value;
             //console.log(message);
-            const room =roomInput.value;
+            const room = roomInput.value;
             //console.log(room);
             if (message ==="") return
             displayMessage(message);
